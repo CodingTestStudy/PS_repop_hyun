@@ -1,3 +1,4 @@
+//백준 1922 네트워크 연결
 #include <iostream>
 #include <string.h>
 #include <vector>
