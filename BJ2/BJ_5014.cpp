@@ -1,4 +1,4 @@
-//재채점에 의하여 다시 품
+//재채점으로 의하여 다시 품
 #include <iostream>
 #include <queue>
 #include <utility>
