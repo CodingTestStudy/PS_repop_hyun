@@ -1,47 +1,21 @@
-import re
-
-
-answer = "=.="
-    
-answer = answer.lower()
-str = "~!@#$%^&*()=+[{]}:?,<>/"
-
-for st in str:
-    answer = answer.replace(st,'')
-
-while(1):
-    if answer == answer.replace("..",".") :
-        break
-    
-    answer = answer.replace("..",".")
-    
-
-
-print(answer)
-
-
-if answer[0] == "." and len(answer) > 1:
-        answer = answer[1:]
-elif answer[0] == "." and len(answer) == 1:
-        answer = ""
+record = ["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"]
+answer = []
+dic={}
+cnt = 1
+nick =[]
+for _ in range(0,len(record)+1):
+    nick.append("")
         
-if  len(answer) > 1 and answer[-1] == "." :
-    answer = answer[:-1]
-elif len(answer) == 1 and answer[-1] == ".":
-    answer = ""
-              
-  
-if answer == "": answer+= "a"
-    
-if len(answer) >= 16 :
-        answer = answer[0:15]
-        
-if answer[-1] == ".":
-        answer = answer[:len(answer)]
-    
-while len(answer) < 3:
-    answer += answer[-1]
-    
-
-  
-print(answer)     
+ret = []
+for x in record:
+    tmp = x.split()
+    if len(tmp) >= 3:
+        if tmp[1] not in dic:
+            dic[tmp[1]] = cnt
+            cnt+=1
+        nick[dic[tmp[1]]] = tmp[2]
+        if tmp[0] == "Enter":
+            ret.append(["E",dic[tmp[1]]])
+    else :
+        if tmp[0] == "Leave":
+            ret.append(["L",dic[tmp[1]]])
