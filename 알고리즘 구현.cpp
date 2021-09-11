@@ -162,3 +162,43 @@ int mstrcmp(const char str1[], const char str2[])
 		++c;
 	return str1[c] - str2[c];
 }
+
+
+
+
+
+//////////자바
+
+
+// boolean nextPermutation(int[] arr) {
+// 	total++;
+// 	// step1
+// 	int i=N-1;
+// 	while( i>0 && arr[i-1] >= arr[i] ) --i; 
+	
+//     //i가 0이라는 말은 이 순열이 내림차순 형태로 정렬되어 있다는 것.
+//     //다음 순열이 없는 경우이기 때문에 false를 반환해준다.
+// 	if(i==0) return false;
+	
+// 	//step2
+//     //내가 찾은 교환위치와 교환할 큰 값을 찾는 과정이다.
+// 	int j = N-1;
+// 	while(arr[i-1]>=arr[j]) --j;
+	
+// 	//step3
+//     //j와 i-1번째의 배열 값을 서로 교환해준다.
+// 	int temp = input[i-1];
+// 	input[i-1] = input[j];
+// 	input[j] = temp;
+	
+// 	//step4
+//     //i부터 맨뒤에까지를 오름차순으로 교환해준다.
+// 	int k = N-1;
+// 	while(i<k) {
+// 	    temp=input[i];
+// 		input[i]=input[k];
+// 		input[k]=temp;
+// 		++i; --k;
+// 	}
+// 	return true;		
+// }
