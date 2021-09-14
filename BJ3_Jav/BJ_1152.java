@@ -1,4 +1,4 @@
-package BJ3;
+package BJ3_Jav;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
