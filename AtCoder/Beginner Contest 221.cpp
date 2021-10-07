@@ -1,5 +1,4 @@
 //A
-/*
 #include <iostream>
 #include <algorithm>
 #include <string.h>
@@ -20,11 +19,10 @@ int main() {
 	return 0;
 
 }
-*/
+
 
 
 //B
-/*
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -54,10 +52,9 @@ int main() {
 
 	return 0;
 
-}*/
+}
 
 //C
-/*
 #include <iostream>
 #include <algorithm>
 #include <string.h>
@@ -112,11 +109,7 @@ void permu(int n) {
 		
 		
 	}
-
-
-
 }
-
 int main() {
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 	memset(visited, 0, sizeof(visited));
@@ -130,4 +123,3 @@ int main() {
 	return 0;
 
 }
-*/
