@@ -6,36 +6,41 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.*;
 
-
 public class Main {
 
+    static boolean arr[] = new boolean[1000002];
+    
     public static void main(String[] args) throws IOException{
-        
+        Arrays.fill(arr,false);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
         
-        int score = Integer.parseInt(st.nextToken());
-        if(score >= 90){
-            bw.write("A\n");
+        long MIN = Long.parseLong(st.nextToken());
+        long MAX = Long.parseLong(st.nextToken());
+        
+        for(long i = 2 ; i * i <=MAX;i++){
 
-        }else if( 80 <= score &&score < 90 ){
-            bw.write("B\n");
-        }else if(70<= score && score < 80){
-            bw.write("C\n");
-        }else if(60<= score && score < 70){
-            bw.write("D\n");
-        }else{
-            bw.write("F\n");
+            long start = MIN / (i*i);
+            if((start*i*i) != MIN)start+=1;
+            for(long j = start ; (i*i*j)<= MAX ; j++){
+                int idx = (int)((i*i*j)-MIN);
+                arr[idx] = true;
+            }
+
         }
         
+        int ret = 0;
+        for(int i = 0 ; i < MAX - MIN + 1 ; i++){
+            if(!arr[i])ret++;
+        }
+        
+        bw.write(ret+"\n");
+    
+    
         bw.flush();bw.close();
         br.close();
         
-        
-        StringBuilder ans = new StringBuilder();
-        String s = "hh";
-        s.charAt(0);
 
 
 
