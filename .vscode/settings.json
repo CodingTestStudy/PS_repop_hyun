@@ -6,5 +6,9 @@
         "utility": "cpp",
         "xstring": "cpp",
         "xiosbase": "cpp"
-    }
+    },
+    "java.project.sourcePaths": [
+        "프로그래머스",
+        ""
+    ]
 }
