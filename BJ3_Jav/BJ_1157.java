@@ -1,8 +1,7 @@
-
 import java.io.*;
 import java.util.*;
 
-public class test {
+public class Main {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static int[] arr = new int[27];
     public static void main(String[] args) throws IOException{

@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class test {
+public class Main {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static int dir;
     static Deque<String> dq;
