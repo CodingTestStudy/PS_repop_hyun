@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class test {
+public class Main {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static int N;
     static int[] arr;
@@ -39,8 +39,7 @@ public class test {
         
     }
 
-    bw.write(Integer.toString(ans));
-    bw.flush();
+    System.out.println(ans);
 
     }
     
