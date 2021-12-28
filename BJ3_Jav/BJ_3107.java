@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 import java.lang.*;
-public class test {
+public class Main {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     
     public static void main(String[] args) throws IOException{
@@ -19,8 +19,6 @@ public class test {
         if(tmp[i].length() != 0)lenOfTmp++;
      }
    
- 
-     int idx = 0 ;
      boolean flag = false;
      for(String e : tmp){
     
