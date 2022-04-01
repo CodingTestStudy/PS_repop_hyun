@@ -19,8 +19,6 @@ public class test {
         if(tmp[i].length() != 0)lenOfTmp++;
      }
    
- 
-     int idx = 0 ;
      boolean flag = false;
      for(String e : tmp){
     

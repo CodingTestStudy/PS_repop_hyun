@@ -83,7 +83,7 @@ public class Main {
             
 
         }
-        bw.write(Integer.toString(ans));
+
         bw.flush();
         bw.close();
     	
