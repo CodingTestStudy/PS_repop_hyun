@@ -1,24 +1,35 @@
-from re import I
+import functools
 import sys
-import math
+from functools import cmp_to_key
 
-msg = input()
-N = len(msg)
-R = 1 
-
-
-for x in range(1,int(math.sqrt(N)+1)):
-    if N % x == 0 : R = x
-
-C = N//R
+def comp(a, b):
+    if a[0] == b[0]:
+        return a[1] < b[1]
+    else:
+        return a[0] < b[0]
 
 
-ans = ""
 
-for i in range(0,R):
-    ptr = i
-    for j in range(0,C):
-        ans += msg[ptr]
-        ptr+= R
+R,C = map(int,sys.stdin.readline().rstrip().split())
+arr=[[0]*R]
+cordi = list()
+for i in range(R):
+    tmp = sys.stdin.readline().rstrip()
+    for x in tmp:
+        if x == '.':
+            arr[i].append('.')
+        elif x == 'X':
+            arr[i].append('X')
 
-print(ans)
+    
+
+
+for i in arr:
+    for j in range(C):
+        if arr[i][j] == 'X':
+            cordi.append(tuple(i,j))
+
+
+cordi.sort(key= functools.cmp_to_key(comp))
+
+print(cordi)
